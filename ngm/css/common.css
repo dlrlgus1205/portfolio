@@ -1,0 +1,333 @@
+/* 모든 페이지에 공통 들어가는 스타일 (header/footer) */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css");
+html, body {
+    color: #3D3D3D;
+    line-height: 1.5;
+    font-family: 'Noto Sans KR', 'NanumGothic', 'Malgun Gothic', 'Apple SD Gothic', 'Apple SD Gothic Neo', 'Dotum', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    /* letter-spacing: -0.05em; */
+    word-break: keep-all; /* 단어별 줄바꿈 */
+}
+#wrap { /* id="wrap" */
+    overflow: hidden;
+    position: relative;
+    min-width: 320px;
+}
+/* 콘텐츠의 넓이를 제한하고 홈페이지를 브라우저 가운데 배치 */
+.wrapper {
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 20px;
+    margin: 0 auto;
+    /* 1400px 이하부터 320px까지 모든 사이즈 반응형 
+       1400px 일때에도 좌우에 여백은 유지해야함 
+       (1400이상에서 1400px이하로 변경되는 점 - 반응형으로 전환되는점)
+       부드럽게 여백을 유지하면서 전환
+       원래 좌우에 여백이 20px씩 들어가 있는 걸로 스타일을 줌
+       1400px이 콘텐츠 영역인데 왼쪽 20 + 오른쪽 20 = 1440px이 넓이
+       padding으로 좌우에 여백을 20px씩 줌  */
+}
+@media screen and (max-width:640px){
+    /* 640px 이하의 디바이스에서만 아래 css가 적용
+      pc에서는 1280px이라는 콘텐츠 고정 넓이가 존재했지만
+      모바일에서는 디바이스 넓이에 맞춰서 꽉차게 구현
+      구현방식이 달라서 고정값을 모두 삭제 */
+    html, body {
+        font-size: 13px;
+    }
+}/* media 종료 */
+.clearfix::after{display:block;clear:both;content:".";visibility:hidden;height:0;}
+.clearfix{display:block;}
+
+/* wrapper와 동일한 사이즈를 갖은 position:relative를 요소는
+   cnt_wrap 클래스 줌 */
+.cnt_wrap {
+    position: relative;
+}
+
+.header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 300;
+    width: 100%;
+    height: 100px;
+    padding: 0 3%;
+    border-bottom: 1px solid #1D1D1D;
+    color: #1D1D1D;
+    text-align: center;
+}
+.header .logo {
+    float: left;
+    margin: 20px 0;
+}
+.header .logo a {
+    display: block;
+    width: 249px;
+    height: 60px;
+    background-image: url(../images/common/logo.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    font-size: 0;
+    line-height: 0;
+}
+.header.fixed {
+    position: fixed;
+    min-width: 1400px;
+    background-color: #FFF;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    color: #1D1D1D;
+}
+@media screen and (min-width:641px){
+    .header .gnb {
+        float: left;
+        width: calc(100% - 249px);
+    }
+    .header .gnb ul li {
+        float: left;
+    }
+    .header .gnb ul li a {
+        display: block;
+        width: 150px;
+        font-size: 1.5vw;
+        line-height: 100px;
+        text-align: center;
+    }
+    .header .gnb ul li.ngm {
+        margin-left: 21%;
+    }
+    .header .gnb ul li.camping {
+        margin-left: 3%;
+    }
+    .header .gnb ul li.glamping {
+        margin-left: 3%;
+    }
+    .header .gnb ul li.reserve {
+        margin-left: 21%;
+    }
+    .header .gnb ul li.destination {
+        margin-left: 3%;
+    }
+}
+@media screen and (max-width:1700px){
+    .header .gnb ul li a {
+        width: 120px;
+    }
+    .header .gnb ul li.ngm {
+        margin-left: 18%;
+    }
+    .header .gnb ul li.camping {
+        margin-left: 3%;
+    }
+    .header .gnb ul li.glamping {
+        margin-left: 3%;
+    }
+    .header .gnb ul li.reserve {
+        margin-left: 18%;
+    }
+    .header .gnb ul li.destination {
+        margin-left: 3%;
+    }
+}
+@media screen and (max-width:1500px){
+    .header .gnb ul li a {
+        width: 105px;
+    }
+    .header .gnb ul li.ngm {
+        margin-left: 15%;
+    }
+    .header .gnb ul li.camping {
+        margin-left: 3%;
+    }
+    .header .gnb ul li.glamping {
+        margin-left: 3%;
+    }
+    .header .gnb ul li.reserve {
+        margin-left: 15%;
+    }
+    .header .gnb ul li.destination {
+        margin-left: 3%;
+    }
+}
+@media screen and (max-width:1200px){
+    .header .gnb ul li.ngm {
+        margin-left: 10%;
+    }
+    .header .gnb ul li.camping {
+        margin-left: 2%;
+    }
+    .header .gnb ul li.glamping {
+        margin-left: 2%;
+    }
+    .header .gnb ul li.reserve {
+        margin-left: 10%;
+    }
+    .header .gnb ul li.destination {
+        margin-left: 2%;
+    }
+}
+@media screen and (max-width:1040px){
+    .header .gnb ul li a {
+        width: 90px;
+    }
+    .header .gnb ul li.ngm {
+        margin-left: 10%;
+    }
+    .header .gnb ul li.camping {
+        margin-left: 3%;
+    }
+    .header .gnb ul li.glamping {
+        margin-left: 3%;
+    }
+    .header .gnb ul li.reserve {
+        margin-left: 3%;
+    }
+    .header .gnb ul li.destination {
+        margin-left: 3%;
+    }
+}
+@media screen and (min-width:901px){
+    .header .gnb .gnb_open {
+        display: none;
+    }
+    .header .gnb .gnb_close {
+        display: none;
+    }
+}
+@media screen and (max-width:900px){
+    .header .gnb {
+        overflow-y: auto;
+    }
+    .header .gnb button {
+        float: right;
+        height: 100px;
+        padding: 0;
+    }
+    .header .gnb button span {
+        display: none;
+    }
+    .header .gnb button i {
+        font-size: 30px;
+    }
+    .header .gnb ul {
+        display: none;
+        margin: 60px 20px;
+    }
+    .header .gnb ul li a {
+        display: block;
+        position: relative;
+        width: 100%;
+        padding: 0 0 0 20px;
+        font-size: 22px;
+        line-height: 60px;
+        
+    }
+    .header .gnb .gnb_close {
+        display: none;
+        position: fixed;
+        padding: 0 3%;
+        right: 0;
+        top: 0;
+        color: #1D1D1D;
+    }
+    .header.menu_mobile .gnb {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #FFF;
+        color: #1D1D1D;
+    }
+    .header.menu_mobile .gnb .gnb_open {
+        display: none;
+    }
+    .header.menu_mobile .gnb > ul {
+        display: block;
+    }
+    .header.menu_mobile .gnb .gnb_close {
+        display: block;
+    }
+    .header.fixed {
+        min-width: 320px;
+    }
+    .header.fixed .gnb .gnb_open i {
+        color: #1D1D1D;
+    }
+}
+@media screen and (max-width:640px){
+    .header {
+        height: 60px;
+    }
+    .header .logo {
+        margin: 15px 0;
+    }
+    .header .logo a {
+        width: 125px;
+        height: 30px;
+    }
+    .header .gnb button {
+        float: right;
+        height: 60px;
+        padding: 0;
+    }
+    .header .gnb ul li.ngm {
+        margin-left: 0;
+    }
+    .header .gnb ul li.camping {
+        margin-left: 0;
+    }
+    .header .gnb ul li.glamping {
+        margin-left: 0;
+    }
+    .header .gnb ul li.reserve {
+        margin-left: 0;
+    }
+    .header .gnb ul li.destination {
+        margin-left: 0;
+    }
+}
+
+.footer {
+    width: 100%;
+    margin: 0 3% 10% 3%;
+    border-top: 1px solid #1D1D1D;
+    text-align: left;
+}
+.footer .flogo button {
+    margin: 3% 0 1% 0;
+}
+.footer .flogo button span {
+    float: left;
+    width: 166px;
+    height: 40px;
+    background-image: url(../images/common/logo.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    font-size: 0;
+    line-height: 0;
+}
+.footer .flogo button i {
+    float: right;
+    margin: 5px 0 0 0;
+    font-size: 30px;
+}
+
+.footer .flogo button.close {
+    display: none;
+}
+.footer .flogo.f_open button.close {
+    display: block;
+}
+.footer .flogo.f_open button.open {
+    display: none;
+}
+.footer .finfo {
+    display: none;
+}
+.footer .finfo span {
+    padding-right: 2%;
+}

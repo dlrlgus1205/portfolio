@@ -1,0 +1,366 @@
+@import url(default.css);
+@import url(common.css);
+
+.visual {
+    position: relative;
+    height: 100vh;
+    background: url(../images/main/visual_bg.png) no-repeat center center / cover;
+    color: #fff;
+}
+.visual .visual_wrap {
+    position: absolute;
+    left: calc(50% - 700px);
+    top: 45%;
+    transform: translate(0, -50%);
+}
+.visual h2 {
+    margin: 0 0 20px 0;
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.visual h2 strong {
+    display: block;
+    margin: 0 0 20px 0;
+    font-size: 100px;
+    font-weight: 700;
+}
+.visual span {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+@media screen and (max-width:640px){
+    .visual {
+        background: url(../images/main/visual_m_bg.png) no-repeat center center / cover;
+        height: 450px;
+    }
+    .visual .visual_wrap {
+        left: 20px;
+        top: 30%;
+    }
+    .visual h2 {
+        margin: 0 0 10px 0;
+        font-size: 30px;
+    }
+    .visual h2 strong {
+        margin: 0;
+        font-size: 40px;
+    }
+    .visual span {
+        display: none;
+    }
+}
+
+.produce {
+    padding: 120px 0 150px 0;
+    background-color: #000;
+    color: #fff;
+}
+.produce h2 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.produce .inner {
+    display: flex;
+    margin: 100px 0 0 360px;
+}
+.produce .inner p {
+    margin: 280px 0 0 40px;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+@media screen and (max-width:640px){
+    .produce {
+        padding: 50px 0 30px 0;
+        background-color: #000;
+        color: #fff;
+    }
+    .produce h2 {
+        font-size: 30px;
+    }
+    .produce .inner {
+        display: block;
+        margin: 30px 0 0 0;
+    }
+    .produce .inner .img {
+        width: 100%;
+    }
+    .produce .inner p {
+        float: right;
+        margin: 20px 0 0 130px;
+        font-size: 15px;
+    }
+}
+
+.exp {
+    position: relative;
+    margin: 120px 0 0 0;
+}
+.exp h2 {
+    position: absolute;
+    left: calc(50% - 700px);
+    top: 0;
+    float: left;
+    color: #1d1d1d;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.exp h2.fixed {
+    position: fixed;
+    top: 120px;
+}
+.exp h2.end {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+}
+.exp h2 span {
+    display: block;
+}
+.exp .list {
+    margin-left: 240px;
+}
+.exp .list ul {
+    padding-top: 200px;
+}
+.exp .list ul li {
+    float: left;
+    display: block;
+    position: relative;
+    width: 48%;
+    height: 400px;
+    margin: 0 3.5% 200px 0;
+}
+.exp .list ul li img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.exp .list ul li:nth-child(1),
+.exp .list ul li:nth-child(3),
+.exp .list ul li:nth-child(5) {
+    margin-top: -200px;
+}
+.exp .list ul li:nth-child(2),
+.exp .list ul li:nth-child(4) {
+    margin-right: 0;
+}
+.exp .list ul li:last-child {
+    margin-bottom: 0;
+}
+.exp .list ul li img {
+    width: 100%;
+}
+.exp .list ul li strong {
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 700;
+}
+.exp .list ul li span {
+    position: absolute;
+    color: #fff;
+    right: 30px;
+    bottom: 30px;
+    font-size: 20px;
+    font-weight: 700;
+}
+@media screen and (max-width:1420px){
+    .exp h2 {
+        left: 0;
+    }
+}
+@media screen and (max-width:640px){
+    .exp {
+        margin: 30px 0 0 0;
+    }
+    .exp h2 {
+        position: static;
+        left: auto;
+        top: auto;
+        float: none;
+        font-size: 30px;
+    }
+    .exp h2.fixed {
+        position: static;
+        top: auto;
+    }
+    .exp h2.end {
+        position: static;
+        top: auto;
+        bottom: auto;
+    }
+    .exp h2 span {
+        display: inline;
+    }
+    .exp .list {
+        width: calc(100% + 40px);
+        margin: 30px 0 0 -20px;
+    }
+    .exp .list ul {
+        padding-top: 0;
+    }
+    .exp .list ul li {
+        float: none;
+        display: block;
+        position: relative;
+        width: 100%;
+        height: auto;
+        margin: 0;
+        font-size: 0;
+        line-height: 0;
+    }
+    .exp .list ul li:nth-child(1),
+    .exp .list ul li:nth-child(3),
+    .exp .list ul li:nth-child(5) {
+        margin-top: 0;
+    }
+    .exp .list ul li strong {
+        left: 20px;
+        top: 20px;
+        font-size: 17px;
+        line-height: 1.2;
+    }
+    .exp .list ul li span {
+        right: 20px;
+        bottom: 20px;
+        font-size: 13px;
+        line-height: 1.2;
+    }
+}
+.display {
+    position: relative;
+    height: 1060px;
+    margin: 120px 0 0 0;
+    color: #fff;
+}
+.display h2 {
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 1.2;
+    padding: 120px 0 30px 0;
+    text-align: center;
+}
+.display span {
+    display: block;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+}
+.display .video {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+}
+.display .video::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,86,0.3);
+    content: "";
+}
+.display .video video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.display ul {
+    display: flex;
+    margin: 130px 0 0 0;
+}
+.display ul li {
+    position: relative;
+    float: left;
+    width: 220px;
+    padding: 110px 0 0 0;
+}
+.display ul li.swiper-slide-active {
+    display: block;
+    width: 440px;
+    padding: 0;
+    transition: 0.5s;
+}
+.display ul li a img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+.display ul li a strong {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    font-size: 30px;
+    font-weight: 700;
+}
+@media screen and (max-width:1550px) {
+    .display ul li {
+        width: 180px;
+        padding: 90px 0 0 0;
+    }
+    .display ul li.swiper-slide-active {
+        width: 360px;
+    }
+    .display ul li a strong {
+        right: 25px;
+        bottom: 25px;
+        font-size: 25px;
+    }
+}
+@media screen and (max-width:1200px) {
+    .display ul li {
+        width: 150px;
+        padding: 75px 0 0 0;
+    }
+    .display ul li.swiper-slide-active {
+        width: 300px;
+    }
+    .display ul li a strong {
+        right: 20px;
+        bottom: 20px;
+        font-size: 20px;
+    }
+}
+@media screen and (max-width:640px) {
+    .display {
+        height: 450px;
+        margin: 40px 0 0 0;
+        padding: 0 0 70px 0;
+    }
+    .display h2 {
+        font-size: 30px;
+        padding: 50px 0 30px 0;
+    }
+    .display span {
+        display: none;
+    }
+    .display ul {
+        display: flex;
+        margin: 30px 0 0 0;
+    }
+    .display ul li {
+        width: 120px;
+        padding: 60px 0 0 0;
+    }
+    .display ul li.swiper-slide-active {
+        width: 240px;
+    }
+    .display ul li a strong {
+        right: 15px;
+        bottom: 15px;
+        font-size: 15px;
+    }
+}

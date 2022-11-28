@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+  <script src="https://kit.fontawesome.com/94a48106d1.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/main.css">
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/main.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <title>대전 아쿠아리움</title>
+</head>
+<body>
+  <div id="wrap">
+    <header class="header">
+      <h1 class="logo"><a href="index.html">대전 아쿠아리움</a></h1>
+      <nav class="gnb">
+        <button class="gnb_open"><span>메뉴열기</span><i class="fa-solid fa-bars"></i></button>
+        <ul class="clearfix">
+          <li>
+            <a href="#n"><span>대전아쿠아리움</span></a>
+            <ul>
+              <li><a href="#n">소개</a></li>
+              <li><a href="#n">찾아오시는 길</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#n"><span>테마존</span></a>
+            <ul>
+              <li><a href="#n">체험동물원</a></li>
+              <li><a href="#n">부대시설</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#n"><span>이용안내</span></a>
+            <ul>
+              <li><a href="#n">이용안내</a></li>
+              <li><a href="#n">단체관람안내</a></li>
+              <li><a href="#n">자주하는질문</a></li>
+            </ul>
+          </li>
+        </ul>
+        <button class="gnb_close"><span>메뉴닫기</span><i class="fa-solid fa-xmark"></i></button>
+      </nav>
+      <div class="time">
+        평   일 오전 10시 ~ 오후 6시 (입장마감 5시)<br />
+        공휴일 오전 10시 ~ 오후 7시 (입장마감 6시)
+      </div>
+      <a href="#n" class="group">단체예약하기</a>
+    </header>
+    <section class="visual">
+      <div class="visual_wrap">
+        <h2>즐거운 놀이터<strong>대전 아쿠아리움</strong></h2>
+        <span>만지는 즐거움, 느끼는 생생함!</span>
+      </div>
+    </section>
+    <section class="produce">
+      <div class="wrapper">
+        <h2>대전 도심에 있는<br />
+          천연동굴을 변화시킨 수족관<br />
+          대전 아쿠아리움</h2>
+        <div class="inner clearfix">
+          <img src="images/main/produce.png" class="img" alt="수족관 사진">      
+          <p>다른 나라의 다양한 담수어류를<br />
+            국가별로 만나볼 수 있고,<br />
+            테마별로 재미있게 꾸며진<br />
+            어류들을 볼 수 있습니다.</p>
+        </div>
+      </div>
+    </section>  
+    <section class="exp">
+      <div class="wrapper">
+        <h2>체험<span>안내</span></h2>
+        <div class="list clearfix">
+          <ul>
+            <li class="diver">
+                <img src="images/main/exp01.png" alt="다이버 사진">
+                <strong>다이버의 수중탐사시간</strong>
+                <span>*평일탐사시간 : 운영안함<br />
+                  *주말탐사시간 : 14:00</span>
+            </li>
+            <li class="touch">
+                <img src="images/main/exp02.png" alt="불가사리 사진">
+                <strong>터치풀(무료)</strong>
+                <span>*물고기체험관<br />
+                  *샌드피쉬 체험관</span>
+            </li>
+            <li class="carp">
+                <img src="images/main/exp03.png" alt="비단잉어 사진">
+                <strong>비단잉어 먹이체험</strong>
+                <span>*먹이요금  : 1캡슐 당 1,000원<br />
+                  (자판기 운영 / 500원 X 2개)</span>
+            </li>
+            <li class="croco">
+                <img src="images/main/exp04.png" alt="악어 사진">
+                <strong>악어쇼관람관</strong>
+                <span>*관람요금 : 6,000원<br />
+                  (연간회원 4,000원)</span>
+            </li>
+            <li class="bird">
+                <img src="images/main/exp05.png" alt="오목눈이 사진">
+                <strong>조류체험장</strong>
+                <span>*먹이요금 : 1캡슐 당 1,000원<br />
+                  (자판기 운영 / 500원 X 2개)</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="display">
+        <h2>전시관 안내</h2>
+        <span>대전 아쿠아리움만의 다양한 전시관을 만나보세요!</span>
+        <div class="video">
+          <video loop muted autoplay playsinline>
+            <source src="images/main/display.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="dp swiper">
+          <ul class="swiper-wrapper">
+            <li class="dp_submarine swiper-slide">
+              <a href="#n">
+                <img src="images/main/dp_submarine.png" alt="잠수함관">
+                <strong>잠수함관</strong>
+              </a>
+            </li>
+            <li class="dp_eu swiper-slide">
+              <a href="#n">
+                <img src="images/main/dp_eu.png" alt="유럽관">
+                <strong>유럽관</strong>
+              </a>
+            </li>
+            <li class="dp_amazon swiper-slide">
+              <a href="#n">
+                <img src="images/main/dp_amazon.png" alt="아마존관">
+                <strong>아마존관</strong>
+              </a>
+            </li>
+            <li class="dp_asia swiper-slide">
+              <a href="#n">
+                <img src="images/main/dp_asia.png" alt="아시아관">
+                <strong>아시아관</strong>
+              </a>
+            </li>
+            <li class="dp_kor swiper-slide">
+              <a href="#n">
+                <img src="images/main/dp_kor.png" alt="한국관">
+                <strong>한국관</strong>
+              </a>
+            </li>
+            <li class="dp_time swiper-slide">
+              <a href="#n">
+                <img src="images/main/dp_time.png" alt="타임캡슐관">
+                <strong>타임캡슐관</strong>
+              </a>
+            </li>
+            <li class="dp_main swiper-slide">
+              <a href="#n">
+                <img src="images/main/dp_main.png" alt="메인관">
+                <strong>메인관</strong>
+              </a>
+            </li>
+          </ul>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="wrapper">
+        <div class="flogo">
+          <a href="index.html">대전 아쿠아리움</a>
+        </div>
+        <div class="finfo">
+          <span>대전광역시 중구 대사동 198-14 대전아쿠아리움</span><br />
+          <span>COPYRIGHT ⓒ 대전아쿠아리움. <span class="finfo_m">ALL RIGHTS RESERVED.</span></span>
+          <span class="finfo_pc">전화 : 042-226-2100 사업자등록번호 : 514-81-95043 <span class="finfo_m">대표자 : 장동현</span></span>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
